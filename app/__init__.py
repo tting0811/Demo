@@ -17,9 +17,9 @@ def postInput():
     SE_mean = data['SE_mean']
     KTE_skew = data['KTE_skew(IR)']
     x = [CTR, KTE_kurt, SE_mean, KTE_skew]
-    print(x)
+    print("Feature: ",x)
     input = np.array([x])
-    print(input)
+    
     # 預測
     result = model.predict(input)
 

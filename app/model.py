@@ -7,5 +7,5 @@ RandomForestModel = load('./app/model/best_random_forest_model_4.joblib')
 def predict(input):
     input_df = pd.DataFrame(input, columns=['CTR', 'KTE_kurt(IR)', 'SE_mean', 'KTE_skew(IR)'])
     pred = RandomForestModel.predict(input_df)[0]
-    print(pred)
+    print("Prediction: ",pred)
     return pred
